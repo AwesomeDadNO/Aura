@@ -21,3 +21,9 @@ No app code exists here to test or certify. No full accessibility audit, device-
 ## Nordic Orbit test page
 
 Added at `website/nordic-orbit/`, preserving the original landing page. Browser checks: light/dark switching, persistence after reload in both modes, exact dark body background `rgb(26, 29, 36)` (`#1a1d24`), hero image loads, ecosystem anchor navigation. No horizontal overflow at 320, 390, 768 or 1440px. Visual checks covered mobile light mode and desktop light/dark mode. Viewport override reset after testing. Theme script has no network calls and safely tolerates unavailable storage. System theme changes apply until a manual preference is selected. The hero is an AI-generated concept with transparency, stored in this repository.
+
+## Nordic Living hero revision
+
+Replaced the active orbital hero with new AI-generated photographs of the same cozy Nordic living room in daytime and evening. Generic AURA concept controls replace third-party provider branding. The theme determines which image is visible, including a CSS system-theme fallback. The original orbital asset is retained for design history, but is not referenced by the page.
+
+Verified both images load (1774px natural width), only the correct image is displayed for each theme, and dark background remains `rgb(26, 29, 36)`. Visually inspected the evening hero on desktop and daytime crop at 390px; TV, tablet and phone remain visible. No horizontal overflow at 320, 390 or 1440px. Local HTML/assets/anchor check and JavaScript syntax check passed. Viewport override reset after testing.

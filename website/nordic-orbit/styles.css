@@ -55,9 +55,16 @@ h1 span, h2 span { color: #efaa36; }
 .hero-description { border-left: 1px solid var(--line); padding-left: 40px; }
 .badge { display: inline-block; border-radius: 20px; background: var(--badge-bg); color: var(--badge-ink); font-size: 9px; font-weight: 700; letter-spacing: 2px; padding: 8px 15px; }
 .hero-description p { font-size: clamp(17px, 1.7vw, 25px); line-height: 1.35; letter-spacing: -.5px; margin: 20px 0 0; }
-.orbit-stage { position: relative; isolation: isolate; padding: 0 5% 45px; text-align: center; }
-.atmosphere { position: absolute; z-index: -1; inset: -150px 0 0; background: radial-gradient(ellipse at 50% 65%, color-mix(in srgb, var(--lavender) 36%, transparent), transparent 68%); }
-.hero-art { display: block; width: min(1150px, 100%); height: auto; margin: -30px auto -35px; }
+.home-stage { padding: 30px 0 45px; text-align: center; }
+.home-scene { overflow: hidden; border-radius: 16px; border: 1px solid var(--line); background: var(--panel); }
+.hero-art { display: block; width: 100%; height: auto; aspect-ratio: 2 / 1; max-height: 600px; object-fit: cover; object-position: center; }
+.hero-art--dark { display: none; }
+:root[data-theme="dark"] .hero-art--light { display: none; }
+:root[data-theme="dark"] .hero-art--dark { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .hero-art--light { display: none; }
+  :root:not([data-theme="light"]) .hero-art--dark { display: block; }
+}
 .concept-label { font-size: 8px; line-height: 1.7; letter-spacing: 2px; color: var(--muted); position: relative; margin: 15px 0 20px; }
 .hero-actions { display: flex; gap: 20px; justify-content: center; position: relative; }
 .button { display: inline-flex; justify-content: center; align-items: center; gap: 18px; padding: 14px 26px; min-height: 48px; border-radius: 40px; font-size: 16px; font-weight: 600; }
@@ -101,7 +108,6 @@ h3 { font-size: 19px; letter-spacing: -.5px; margin: 0 0 10px; }
   nav { gap: 24px; }
   .hero-heading { gap: 30px; }
   .hero-description { padding-left: 25px; }
-  .hero-art { margin-top: -5px; }
   .ecosystem { gap: 20px; }
   .product + .product { padding-left: 20px; }
   .product-heading { gap: 10px; }
@@ -120,9 +126,9 @@ h3 { font-size: 19px; letter-spacing: -.5px; margin: 0 0 10px; }
   .hero-description { border-left: 0; padding: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
   .hero-description p { margin: 0; font-size: 17px; line-height: 1.5; max-width: 400px; }
   .desktop-break { display: none; }
-  .orbit-stage { padding: 12px 0 32px; }
-  .hero-art { width: 110%; max-width: none; margin: 0 -5% -12px; }
-  .atmosphere { inset: -40px 0 0; }
+  .home-stage { padding: 26px 0 32px; }
+  .home-scene { border-radius: 12px; }
+  .hero-art { aspect-ratio: 3 / 2; max-height: none; object-position: right center; }
   .concept-label { font-size: 6px; letter-spacing: 1.3px; margin: 12px 15px 20px; }
   .hero-actions { gap: 12px; padding-inline: 5%; flex-wrap: wrap; }
   .button { font-size: 13px; gap: 10px; padding: 13px 20px; }
