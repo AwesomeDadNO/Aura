@@ -26,11 +26,18 @@ node --check website/nordic-orbit/theme.js
 
 The dependency-free check validates HTML structure, local asset/fragment links and forbidden placeholder/form/script constructs. Responsive layout should also be inspected in a browser at phone, tablet and desktop sizes. This check is not a full accessibility audit.
 
-## Deploy when ready
+## GitHub Pages
 
-This branch does not enable deployment or change GitHub Pages settings. The publish directory is **`website/`** and no build command is required. Upload those files to a static host, or configure GitHub Pages with a workflow that uploads `website/` using the official Pages actions after reviewing it. GitHub Pages' branch-folder option does not directly select arbitrary `website/` folders; use an artifact workflow or a separately prepared publishing branch.
+The `Publish AURA website` workflow publishes on pushes to `main`. `python3 scripts/build_pages.py` stages the selected Nordic Living design at `_site/index.html`, so the public homepage is https://awesomedadno.github.io/Aura/.
 
-Before deployment choose the domain and hosting log policy, review public claims and test all links. The strategy link on the page currently points to the dedicated development branch; update it if the branch is renamed or removed. A host's access logs are separate from this site's lack of analytics.
+The build retains previous URLs under `/Aura/website/`, including the original design and `/Aura/website/nordic-orbit/`. Root-page asset and original-design links are adjusted during staging. GitHub Pages must use **GitHub Actions** as its source. No framework dependencies are required. To preview the published layout locally:
+
+```sh
+python3 scripts/build_pages.py
+python3 -m http.server 8082 --bind 127.0.0.1 --directory _site
+```
+
+Open http://127.0.0.1:8082/. `_site/` is generated and ignored by Git.
 
 ## Status and scope
 
@@ -44,4 +51,4 @@ Use an absolute publish-directory path to avoid a 404 when starting from a diffe
 python3 -m http.server 8081 --bind 127.0.0.1 --directory /Users/awesomedad/Documents/ChatGPT/AuraOS/website
 ```
 
-On this checkout, open http://127.0.0.1:8081/nordic-orbit/. On another computer substitute its checkout path. Deployment still publishes the whole `website/` directory; the test page is served at `/nordic-orbit/`. Its AI-generated home photographs and device interfaces are concepts; the real text, navigation, product sections and controls are HTML. No app interface functionality is implied.
+On this checkout, open http://127.0.0.1:8081/nordic-orbit/. On another computer substitute its checkout path. Local source preview serves the test page at `/nordic-orbit/`; the Pages workflow stages it at the public root. Its AI-generated home photographs and device interfaces are concepts; the real text, navigation, product sections and controls are HTML. No app interface functionality is implied.
