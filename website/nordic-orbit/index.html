@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AURA Nordic Orbit — an experimental, local-first entertainment ecosystem landing page.">
+  <meta name="theme-color" content="#faf5ee">
+  <title>AURA — Your world. Connected.</title>
+  <link rel="icon" href="../icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="theme.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header container">
+    <a class="brand" href="#" aria-label="AURA home">AURA <span>/</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#ecosystem">Ecosystem</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#roadmap">Roadmap</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" hidden><span class="theme-icon" aria-hidden="true">◐</span><span class="theme-label">Dark mode</span></button>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-heading container">
+        <div><p class="eyebrow">YOUR SPACE. YOUR CHOICE.</p><h1 id="hero-title">Your world.<br>Connected<span>.</span></h1></div>
+        <div class="hero-description"><span class="badge">IN DEVELOPMENT</span><p>Independent entertainment apps<br class="desktop-break"> for your TV, phone and tablet.<br class="desktop-break"> Local-first by design.</p></div>
+      </div>
+      <div class="orbit-stage">
+        <div class="atmosphere" aria-hidden="true"></div>
+        <img class="hero-art" src="assets/nordic-orbit.png" width="1774" height="887" fetchpriority="high" alt="Concept illustration: AuraOS on a television, AuraBox on a tablet and AuraAmp on a phone, connected by a warm amber orbit.">
+        <p class="concept-label">INTERFACE CONCEPT · NOT A PRODUCT SCREENSHOT</p>
+        <div class="hero-actions"><a class="button primary" href="#ecosystem">Explore AURA <span aria-hidden="true">→</span></a><a class="button secondary" href="https://github.com/AwesomeDadNO/Aura"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.86c-2.78.6-3.37-1.18-3.37-1.18-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.64-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.84c.85 0 1.7.11 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.73c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>Follow on GitHub</a></div>
+      </div>
+    </section>
+    <section class="ecosystem container" id="ecosystem" aria-label="The AURA ecosystem">
+      <article class="product"><div class="product-heading"><span class="product-icon" aria-hidden="true">▱</span><span class="slash" aria-hidden="true">/</span><div><h2>AuraOS</h2><p>Android TV launcher</p></div></div><p class="product-copy">A personal starting point for your apps and entertainment. Made for the big screen and the remote in your hand.</p><span class="badge">IN DEVELOPMENT</span></article>
+      <article class="product"><div class="product-heading"><span class="product-icon" aria-hidden="true">♫</span><span class="slash" aria-hidden="true">/</span><div><h2>AuraAmp</h2><p>Music on phone & tablet</p></div></div><p class="product-copy">Your own frequency, wherever you are. A standalone music app with supported service connections planned.</p><span class="badge">PLANNED</span></article>
+      <article class="product"><div class="product-heading"><span class="product-icon" aria-hidden="true">▷</span><span class="slash" aria-hidden="true">/</span><div><h2>AuraBox</h2><p>Media on phone & tablet</p></div></div><p class="product-copy">A space for your media and supported sources. A standalone experience, designed to connect when you choose.</p><span class="badge">PLANNED</span></article>
+    </section>
+    <section class="privacy container" id="privacy">
+      <div><p class="eyebrow">PERSONAL BY NATURE</p><h2>Your entertainment.<br>Your boundaries<span>.</span></h2><p class="section-copy">Local control is our starting point. Connections, learning and sharing should be choices you understand.</p></div>
+      <div class="principles"><article><span>01</span><div><h3>Start with yourself</h3><p>Local-first AURA accounts are the goal. Connected providers may require separate accounts and subscriptions.</p></div></article><article><span>02</span><div><h3>Choose what connects</h3><p>AuraConnect is planned as optional encrypted sync, with manual or automatic sharing. Architecture and encryption still need validation.</p></div></article><article><span>03</span><div><h3>Let Aura in. Or don't.</h3><p>Guardian security signals and optional on-device personalization are planned. Platform permissions limit protection; third-party APIs can receive service requests and IP addresses.</p></div></article></div>
+    </section>
+    <section class="roadmap container" id="roadmap"><div class="section-heading"><p class="eyebrow">A WORK IN PROGRESS</p><h2>Built with intention<span>.</span></h2><p class="section-copy">No promised dates. Clear steps, with room to get them right.</p></div><div class="milestones"><article><p class="step">01 / NOW</p><h3>Shape the foundation</h3><p>Product direction, privacy boundaries and this experimental website. App readiness is not verified in this repository.</p></article><article><p class="step">02 / NEXT</p><h3>Learn together</h3><p>A small beta after installation, navigation and privacy checks pass. Registration is not open yet.</p></article><article><p class="step">03 / LATER</p><h3>Open the doors</h3><p>Real releases, supported-device lists and documented integrations after stability and security reviews.</p></article></div><a class="strategy-link" href="https://github.com/AwesomeDadNO/Aura/blob/feat/aura-launch-website/roadmap.md">Read the Norwegian / English strategy <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer class="container site-footer"><a class="brand" href="#">AURA <span>/</span></a><p>NORDIC ORBIT <span> / </span> EXPERIMENTAL DESIGN</p><a href="../">Original concept ↗</a><a href="https://github.com/AwesomeDadNO/Aura">GitHub ↗</a><small>Concept interfaces. Planned products. No app downloads available here.</small></footer>
+</body>
+</html>

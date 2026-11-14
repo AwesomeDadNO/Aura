@@ -17,3 +17,7 @@ Repository initially had no refs or files. GitHub reports `main` as default. An 
 ## Limits
 
 No app code exists here to test or certify. No full accessibility audit, device-lab testing, provider API validation or security audit has been performed. No framework build is required for this static site. Public downloads, beta registration and deployment remain intentionally absent. Check hosting logs/privacy separately when selecting a host.
+
+## Nordic Orbit test page
+
+Added at `website/nordic-orbit/`, preserving the original landing page. Browser checks: light/dark switching, persistence after reload in both modes, exact dark body background `rgb(26, 29, 36)` (`#1a1d24`), hero image loads, ecosystem anchor navigation. No horizontal overflow at 320, 390, 768 or 1440px. Visual checks covered mobile light mode and desktop light/dark mode. Viewport override reset after testing. Theme script has no network calls and safely tolerates unavailable storage. System theme changes apply until a manual preference is selected. The hero is an AI-generated concept with transparency, stored in this repository.
